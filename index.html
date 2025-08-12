@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PennyWise | Smart Money Management</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar container" role="navigation" aria-label="Main navigation">
+      <div class="logo" aria-label="PennyWise logo with coin icon">
+        <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 64 64" fill="none" aria-hidden="true" focusable="false">
+          <circle cx="32" cy="32" r="30" fill="url(#coinGradient)" />
+          <circle cx="32" cy="32" r="24" fill="var(--white)" />
+          <path d="M20 32h24M32 20v24" stroke="url(#coinGradient)" stroke-width="4" stroke-linecap="round" />
+          <defs>
+            <linearGradient id="coinGradient" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#6C5CE7" />
+              <stop offset="1" stop-color="#A29BFE" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <div>
+          <div class="logo-text">PennyWise 💰</div>
+          <div class="logo-tagline">Smarter money, better future</div>
+        </div>
+      </div>
+      <a href="add_data.html" class="btn btn-primary">
+        <i class="fas fa-plus"></i> Add Data
+      </a>
+    </nav>
+  </header>
+
+  <main class="container" role="main" tabindex="-1">
+    <section class="hero profile-card" aria-label="User profile and experience">
+      <div class="profile-info">
+        <div class="level-circle" aria-label="Current level 17">17</div>
+        <div class="profile-details">
+          <h2>Welcome back, Tshiamo! 🎉</h2>
+          <span class="profile-badge" aria-label="Gold member badge">🏅 Gold Member</span>
+        </div>
+      </div>
+      <div class="xp-info" aria-live="polite" aria-atomic="true">
+        <p>XP earned this month</p>
+        <strong>350 / 500 XP</strong>
+        <div class="progress-container" role="progressbar" aria-valuemin="0" aria-valuemax="500" aria-valuenow="350">
+          <div class="progress-bar"></div>
+        </div>
+        <div class="badges" aria-label="Achievement badges">
+          <div class="badge badge-yellow" title="Completed 3 Goals">🎯 3 Goals</div>
+          <div class="badge badge-green" title="Saved R5000+">💸 R5000+</div>
+          <div class="badge badge-blue" title="Budget Master">📊 Budget Master</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-grid" aria-label="Financial overview statistics">
+      <article class="stat-card" tabindex="0">
+        <div class="stat-header">
+          <div class="stat-icon income-icon" aria-hidden="true">
+            <i class="fas fa-arrow-up"></i>
+          </div>
+          <h3 class="stat-title">Total Income</h3>
+        </div>
+        <div class="stat-amount">R12,340</div>
+        <div class="stat-change positive" aria-label="Income increased by 10%">
+          <i class="fas fa-arrow-up"></i> 10%
+        </div>
+      </article>
+
+      <article class="stat-card" tabindex="0">
+        <div class="stat-header">
+          <div class="stat-icon expense-icon" aria-hidden="true">
+            <i class="fas fa-arrow-down"></i>
+          </div>
+          <h3 class="stat-title">Total Expenses</h3>
+        </div>
+        <div class="stat-amount">R8,900</div>
+        <div class="stat-change negative" aria-label="Expenses increased by 5%">
+          <i class="fas fa-arrow-down"></i> 5%
+        </div>
+      </article>
+
+      <article class="stat-card" tabindex="0">
+        <div class="stat-header">
+          <div class="stat-icon balance-icon" aria-hidden="true">
+            <i class="fas fa-wallet"></i>
+          </div>
+          <h3 class="stat-title">Current Balance</h3>
+        </div>
+        <div class="stat-amount">R3,440</div>
+        <div class="stat-change positive" aria-label="Balance increased by 20%">
+          <i class="fas fa-arrow-up"></i> 20%
+        </div>
+      </article>
+    </section>
+
+    <section class="content-grid">
+      <article class="chart-card" aria-label="Income and Expense chart">
+        <div class="card-header">
+          <h3 class="card-title">Monthly Spending 📈</h3>
+          <button class="btn btn-outline" aria-label="Refresh chart">
+            <i class="fas fa-sync-alt"></i>
+          </button>
+        </div>
+        <canvas id="spendingChart" width="400" height="240" role="img" aria-label="Chart showing monthly spending"></canvas>
+      </article>
+
+      <article class="chart-card" aria-label="Goals progress overview">
+        <div class="card-header">
+          <h3 class="card-title">Savings Goals 🏦</h3>
+          <button class="btn btn-outline" aria-label="Add new savings goal">
+            <i class="fas fa-plus"></i>
+          </button>
+        </div>
+        <div class="goals-list">
+          <div class="goal-item" tabindex="0" aria-label="Buy a new car goal, 67 percent complete">
+            <div class="goal-header">
+              <div class="goal-icon goal-purple" aria-hidden="true">💻</div>
+              <div class="goal-name">New Laptop</div>
+              <div class="goal-target">Target: R25 000</div>
+            </div>
+            <div class="goal-progress">Progress</div>
+            <div class="goal-bar" aria-hidden="true">
+              <div class="goal-progress-bar progress-purple"></div>
+            </div>
+            <div class="goal-progress-text" aria-live="polite" style="margin-top:6px; font-weight:600; color: var(--primary);">
+              R18,090 / R27,000 (67%)
+            </div>
+          </div>
+
+          <div class="goal-item" tabindex="0" aria-label="Summer trip goal, 34 percent complete">
+            <div class="goal-header">
+              <div class="goal-icon goal-green" aria-hidden="true">🌴</div>
+              <div class="goal-name">Summer Trip</div>
+              <div class="goal-target">Target: R30,000</div>
+            </div>
+            <div class="goal-progress">Progress</div>
+            <div class="goal-bar" aria-hidden="true">
+              <div class="goal-progress-bar progress-green"></div>
+            </div>
+            <div class="goal-progress-text" aria-live="polite" style="margin-top:6px; font-weight:600; color: var(--success);">
+              R10,200 / R30,000 (34%)
+            </div>
+          </div>
+
+          <div class="goal-item" tabindex="0" aria-label="Emergency Fund goal, 23 percent complete">
+            <div class="goal-header">
+              <div class="goal-icon goal-orange" aria-hidden="true">⚡</div>
+              <div class="goal-name">Emergency Fund</div>
+              <div class="goal-target">Target: R15,000</div>
+            </div>
+            <div class="goal-progress">Progress</div>
+            <div class="goal-bar" aria-hidden="true">
+              <div class="goal-progress-bar progress-orange"></div>
+            </div>
+            <div class="goal-progress-text" aria-live="polite" style="margin-top:6px; font-weight:600; color: var(--warning);">
+              R3,450 / R15,000 (23%)
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="tips-weekly container" aria-label="Weekly challenge and weekly goals" style="margin-bottom: 3rem;">
+      <div class="content-grid">
+        <article class="stat-card" tabindex="0" aria-label="Weekly Challenge">
+          <h3 class="stat-title">Weekly Challenge 🏆</h3>
+          <h4 class="stat-subtitle">Dining Out Challenge</h4>
+          <p style="margin-top: 0.5rem; font-size: 1rem; line-height: 1.5;">
+            Spend less than R300 on dining out/take outs this week
+          </p>
+          <div class="progress-container">
+            <div class="progress-bar" style="width: 75%;"></div>
+          </div>
+          <p class="challenge-status">
+            On track ✅ Keep it up!
+          </p>
+        </article>
+
+        <article class="stat-card" tabindex="0" aria-label="Smart Tips">
+          <h3 class="stat-title">Smart Tips 💡</h3>
+          <div class="tip-card light-blue">
+            <p><strong>💡 Tip of the Day</strong><br>Try the 50/30/20 rule: 50% needs, 30% wants, 20% savings.</p>
+          </div>
+          <div class="tip-card light-green mt-8">
+            <p><strong>🎯 Achievement Unlocked</strong><br>You're building great financial habits!</p>
+          </div>
+          <div class="tip-card light-yellow mt-8">
+            <p><strong>📈 Financial Insight</strong><br>Review your monthly expenses to identify areas for potential savings.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 PennyWise. All rights reserved. Made with ❤️ by Tshiamo(Luna).
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/chart.js"></script>
+</body>
+</html>

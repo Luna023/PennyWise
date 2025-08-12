@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Add Data | PennyWise</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/add_data.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar container" role="navigation" aria-label="Main navigation">
+      <div class="logo" aria-label="PennyWise logo with coin icon">
+        <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 64 64" fill="none" aria-hidden="true" focusable="false">
+          <circle cx="32" cy="32" r="30" fill="url(#coinGradient)" />
+          <circle cx="32" cy="32" r="24" fill="var(--white)" />
+          <path d="M20 32h24M32 20v24" stroke="url(#coinGradient)" stroke-width="4" stroke-linecap="round" />
+          <defs>
+            <linearGradient id="coinGradient" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#6C5CE7" />
+              <stop offset="1" stop-color="#A29BFE" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <div>
+          <div class="logo-text">PennyWise 💰</div>
+          <div class="logo-tagline">Smarter money, better future</div>
+        </div>
+      </div>
+      <a href="index.html" class="btn btn-primary">
+        <i class="fas fa-plus"></i> Go to dashboard
+      </a>
+    </nav>
+  </header>
+
+  <section class="hero" aria-label="Page introduction">
+    <div class="container">
+      <h1 class="hero-title">💰 Add income, expenses, or set new savings goals 💸</h1>
+      <p class="hero-subtitle">Track every rand to make smarter financial decisions 🚀</p>
+    </div>
+  </section>
+
+  <main class="container" role="main">
+    <section class="form-grid" aria-label="Forms to add transactions and savings goals">
+      <div class="form-card" role="region" aria-labelledby="addTransactionLabel" tabindex="0">
+        <h3 id="addTransactionLabel" class="form-title">
+          <i class="fas fa-exchange-alt" aria-hidden="true"></i> Add Transaction
+        </h3>
+
+        <div class="toggle-buttons" role="group" aria-label="Toggle transaction type">
+          <button class="toggle-btn active" aria-pressed="true" type="button">
+            <i class="fas fa-arrow-down" aria-hidden="true"></i> Income
+          </button>
+          <button class="toggle-btn" aria-pressed="false" type="button">
+            <i class="fas fa-arrow-up" aria-hidden="true"></i> Expense
+          </button>
+        </div>
+
+        <form aria-label="Add transaction form">
+          <div class="form-group">
+            <label class="form-label" for="amountInput">
+              <i class="fas fa-rand-sign" aria-hidden="true"></i> Amount (R)
+            </label>
+            <input id="amountInput" type="number" class="form-control" placeholder="e.g. 1000.00 💵" step="0.01" required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="categorySelect">
+              <i class="fas fa-tag" aria-hidden="true"></i> Category
+            </label>
+            <select id="categorySelect" class="form-control" required>
+              <option value="">Select a category</option>
+              <option value="salary">Salary</option>
+              <option value="freelance">Freelance</option>
+              <option value="investment">Investment</option>
+              <option value="other">Other Income</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="descInput">
+              <i class="fas fa-align-left" aria-hidden="true"></i> Description
+            </label>
+            <input id="descInput" type="text" class="form-control" placeholder="Brief description... ✍️" required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="dateInput">
+              <i class="fas fa-calendar" aria-hidden="true"></i> Date
+            </label>
+            <input id="dateInput" type="date" class="form-control" required />
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%">
+            <i class="fas fa-save" aria-hidden="true"></i> Add Transaction
+          </button>
+        </form>
+      </div>
+
+      <div class="form-card" role="region" aria-labelledby="createGoalLabel" tabindex="0">
+        <h3 id="createGoalLabel" class="form-title">
+          <i class="fas fa-bullseye" aria-hidden="true"></i> Create Savings Goal
+        </h3>
+
+        <form aria-label="Create savings goal form">
+          <div class="form-group">
+            <label class="form-label" for="goalName">
+              <i class="fas fa-crosshairs" aria-hidden="true"></i> Goal Name
+            </label>
+            <input id="goalName" type="text" class="form-control" placeholder="e.g. New Phone 📱, Vacation 🌴..." required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="targetAmount">
+              <i class="fas fa-rand-sign" aria-hidden="true"></i> Target Amount (R)
+            </label>
+            <input id="targetAmount" type="number" class="form-control" placeholder="e.g. 5000.00 💰" step="0.01" required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="goalCategory">
+              <i class="fas fa-tag" aria-hidden="true"></i> Category
+            </label>
+            <select id="goalCategory" class="form-control" required>
+              <option value="">Select a category</option>
+              <option value="gadgets">Gadgets</option>
+              <option value="travel">Travel</option>
+              <option value="emergency">Emergency Fund</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="targetDate">
+              <i class="fas fa-calendar-check" aria-hidden="true"></i> Target Date
+            </label>
+            <input id="targetDate" type="date" class="form-control" required />
+          </div>
+
+          <button type="submit" class="btn btn-success" style="width: 100%">
+            <i class="fas fa-bullseye" aria-hidden="true"></i> Create Goal
+          </button>
+        </form>
+      </div>
+    </section>
+    <section class="transactions-card" aria-label="Recent transactions and savings goals">
+      <div class="transactions-header">
+        <h3>Recent Transactions & Goals</h3>
+      </div>
+
+      <div class="empty-state" id="emptyState">
+        <i class="fas fa-sad-tear" aria-hidden="true"></i>
+        <p>No transactions or goals added yet. Start tracking your finances today!</p>
+      </div>
+      <div class="transactions-list" id="transactionsList">
+        <!-- Transactions will be dynamically added here -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 PennyWise. All rights reserved. Made with ❤️ by Tshiamo(Luna).
+  </footer>
+
+  <script src="js/form.js"></script>
+</body>
+</html>
